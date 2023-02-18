@@ -1,13 +1,11 @@
 :root {
-  --onboard-black: "#18181b";
-  --w3o-background-color: "#7e22ce";
-  --w3o-foreground-color: "#18181b";
-  --w3o-text-color: "#f4f4f5";
-  --w3o-border-color: "#db2777";
-  --w3o-action-color: "#60a5fa";
-  --w3o-border-radius: "unset";
+ --w3o-background-color: #d423e1, 
+--w3o-foreground-color: #e82121, 
+--w3o-text-color: #f4ebeb, 
+--w3o-border-color: #5de71d, 
+--w3o-action-color: #37cfd2, 
+--w3o-border-radius: unset, 
 }
-
 html,
 body {
   padding: 0;
@@ -31,14 +29,6 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: #3023e1;
   }
-}
-:root {
-  --w3o-background-color: "#18181b";
-  --w3o-foreground-color: "#581c87";
-  --w3o-text-color: "#f4f4f5";
-  --w3o-border-color: "#db2777";
-  --w3o-action-color: "#60a5fa";
-  --w3o-border-radius: "unset";
 }

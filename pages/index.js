@@ -9,7 +9,7 @@ import {
 } from "@web3-onboard/react";
 import { ethers } from "ethers";
 
-import { Button, Loading } from "@nextui-org/react";
+import { Button, Loading, css } from "@nextui-org/react";
 
 const buttonStyles = {
   borderRadius: "6px",
@@ -63,11 +63,12 @@ export default function Home() {
         </h1>
         <p>{(wallet, connecting)}</p>
         <p>{address}</p>
+        <h4>NEXTUI Custom Button</h4>
         <Button
           auto
           shadow
           bordered
-          color="secondary"
+          css={{ background: "#d423e1" }}
           onClick={() => (wallet ? disconnect(wallet) : connect())}
         >
           {connecting ? "" : wallet ? "DISCONNECT" : "CONNECT"}

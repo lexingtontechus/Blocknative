@@ -8,7 +8,7 @@ import {
 import injectedModule from "@web3-onboard/injected-wallets";
 import walletConnectModule from "@web3-onboard/walletconnect";
 import coinbaseWalletModule from "@web3-onboard/coinbase";
-import phantomModule from '@web3-onboard/phantom'
+import phantomModule from "@web3-onboard/phantom";
 import uauthModule from "@web3-onboard/uauth";
 import mewWallet from "@web3-onboard/mew-wallet";
 import ledgerModule from "@web3-onboard/ledger";
@@ -18,6 +18,7 @@ const uauthOptions = {
   clientID: "814a3502-e259-4972-9e2f-e0d5fe9482d8",
   redirectUri: "https://typ18u-3000.preview.csb.app",
   scope: "openid wallet email profile:optional social:optional",
+  shouldLoginWithRedirect: true,
 };
 
 const uauth = uauthModule(uauthOptions);
@@ -35,7 +36,7 @@ const walletConnect = walletConnectModule();
 const ledger = ledgerModule();
 
 //Phantom initialize
-const phantom = phantomModule()
+const phantom = phantomModule();
 
 const INFURA_KEY = "ba619eee154247f18fe6248d6bbd12aa";
 //const dappId = '768056ca-c7a4-4867-a3c8-3fd13efd8cb2'
@@ -59,7 +60,7 @@ const wallets = [
   injectedModule(),
   uauth,
   walletConnect,
-  phantom,
+  //phantom,
   //coinbaseWalletSdk,
   //mewWalletModule,
   //ledger,
