@@ -1,12 +1,87 @@
-import Link from 'next/link'
+import React, { useEffect, useState } from "react";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
-export default function IndexPage() {
+import {
+  useConnectWallet,
+  useAccountCenter,
+  useWallets,
+} from "@web3-onboard/react";
+import { ethers } from "ethers";
+
+import { Button, Loading, css } from "@nextui-org/react";
+
+const buttonStyles = {
+  borderRadius: "6px",
+  background: "#111827",
+  border: "none",
+  fontSize: "18px",
+  fontWeight: "600",
+  cursor: "pointer",
+  color: "white",
+  padding: "14px 12px",
+  marginTop: "40px",
+  fontFamily: "inherit",
+};
+
+export default function Home() {
+  const [{ wallet, connecting }, connect, disconnect] = useConnectWallet();
+  const [address, setAddress] = useState();
+  const updateAccountCenter = useAccountCenter();
+  const [accountCenterPosition, setAccountCenterPosition] =
+    useState("topRight");
+  const connectedWallets = useWallets();
+  // create an ethers provider
+  // let ethersProvider;
+  // if (wallet) {
+  //ethersProvider = new ethers.providers.Web3OnboardProvider(      wallet.provider,      "any"    );
+  // ethersProvider = new ethers.providers.Web3Provider(wallet.provider, "any");
+  //}
+  //let provider;
+  //useEffect(() => {
+  //  if (!wallet) {
+  //    provider = null;
+  //  } else {
+  //   provider = new ethers.getDefaultProvider(wallet.provider, "any");
+  //   // providers.Web3Provider(wallet.provider, "any");
+  // }  });
   return (
-    <div>
-      Hello World.{' '}
-      <Link href="/about">
-        <a>About</a>
-      </Link>
+    <div className={styles.container}>
+      <Head>
+        <title>Web3-Onboard Demo</title>
+        <meta
+          name="description"
+          content="Example of how to integrate Web3-Onboard with Next.js"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main className={styles.main}>
+        <h1 className={styles.title}>
+          Welcome to this demo of
+          <a href="https://onboard.blocknative.com"> Web3-Onboard</a>!
+        </h1>
+        <p>{(wallet, connecting)}</p>
+        <p>{address}</p>
+        <h4>NEXTUI Custom Button</h4>
+        <Button
+          auto
+          shadow
+          bordered
+          css={{ background: "#d423e1" }}
+          onClick={() => (wallet ? disconnect(wallet) : connect())}
+        >
+          {connecting ? "" : wallet ? "DISCONNECT" : "CONNECT"}
+        </Button>
+        <button
+          className="root"
+          style={buttonStyles}
+          disabled={connecting}
+          onClick={() => (wallet ? disconnect(wallet) : connect())}
+        >
+          {connecting ? "Connecting" : wallet ? "Disconnect" : "Connect"}
+        </button>
+      </main>
     </div>
-  )
+  );
 }
