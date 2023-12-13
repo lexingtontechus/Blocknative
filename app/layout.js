@@ -7,8 +7,8 @@ import { Providers } from "./providers";
 //import Cal from "./components/cal";
 export const metadata = {
   title: {
-    default: "Lexington WEB3 Demo",
-    template: "%s | Lexington WEB3 Demo",
+    default: "Lexington BlockNative WEB3 Demo",
+    template: "%s | Lexington BlockNative WEB3 Demo",
   },
   description:
     "A Lexington WEB3 Demo built with NextJS + Onboard Block Native.",

@@ -4,12 +4,12 @@ import uauthModule from "@web3-onboard/uauth";
 import { init } from "@web3-onboard/react";
 
 // Example key • Replace with your infura key
-const INFURA_KEY = "5be5a02c815f416792313be90e8f18f8";
+const INFURA_KEY = process.env.infuraID;
 const uauthOptions = {
-  clientID: "9cf9141a-2e8a-4ca8-b48b-4768baa7eb8d",
-  redirectUri: "https://8sw95w-3000.csb.app/",
+  clientID: "process.env.uauthID",
+  redirectUri: "process.env.redirectURI" || "https://8sw95w-3000.csb.app/",
   scope: "openid wallet messaging:notifications:optional",
-  walletConnectProjectId: "5b9cdf5b-4b69-4d5f-88cd-a3c68e0ad1fd",
+  walletConnectProjectId: "process.env.projectID",
 };
 
 const uauth = uauthModule(uauthOptions);
