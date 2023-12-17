@@ -1,37 +1,24 @@
-/** @type {import('next').NextConfig} */
+/* @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   reactStrictMode: true,
+  basePath: "",
+  pageExtensions: ["js", "jsx", "ts", "tsx", "mdx"],
   images: {
-    //domains: ["storageapi.fleek.co", "savivets.wpengine.com"],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: "https",
         hostname: "**.fleek.co/**",
-        pathname: "/9ec37732-832c-4af1-a4fa-cc87c28c6dae-bucket/assets/img/**",
-      },
-      {
-        protocol: "https",
-        hostname: "**.lh3.googleusercontent.com/**",
-        pathname: "/**",
-      },
-
-      {
-        protocol: "https",
-        hostname: "**.gravatar.com/**",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "**.media-exp1.licdn.com/**",
-        pathname: "/**",
+        pathname: "/47c43c10-6c0c-4b3b-a520-683839c214cf-bucket/assets/img/**",
       },
     ],
-    domains: [
-      "storageapi.fleek.co",
-      "lh3.googleusercontent.com",
-      "gravatar.com",
-      "media-exp1.licdn.com",
-    ],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    domains: ["storageapi.fleek.co"],
+    loader: "custom",
   },
 };
 

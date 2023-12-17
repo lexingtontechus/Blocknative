@@ -8,24 +8,36 @@
     "post-update": "yarn upgrade --latest"
   },
   "dependencies": {
-    "@nextui-org/react": "^1.0.0-beta.12",
     "@web3-onboard/coinbase": "^2.2.0",
-    "@web3-onboard/core": "^2.14.1",
     "@web3-onboard/injected-wallets": "^2.6.2",
-    "@web3-onboard/ledger": "^2.4.2",
-    "@web3-onboard/mew-wallet": "^2.0.0",
-    "@web3-onboard/phantom": "^2.0.0-alpha.1",
     "@web3-onboard/react": "^2.6.1",
     "@web3-onboard/uauth": "^2.0.1",
     "@web3-onboard/walletconnect": "^2.2.2",
     "ethers": "^6.0.2",
-    "next": "latest",
+    "next": "^14.0.4",
+    "next-themes": "^0.2.1",
+    "pino-pretty": "^10.2.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "tailwindcss": "^3.3.6"
   },
   "license": "MIT",
   "keywords": [
-    "next"
+    "next",
+    "unstoppable domains",
+    "uauth",
+    "onboard",
+    "blocknative",
+    "nextjs",
+    "daisyui",
+    "tailwindcss"
   ],
-  "description": "A \"Hello World\" application with multiple pages that shows how Next.js routing works."
+  "description": "A Lexington WEB3 Demo built with NextJS + Onboard Block Native + Unstoppable Domains (Uauth).",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "daisyui": "^4.4.19",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6"
+  }
 }
