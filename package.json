@@ -12,15 +12,14 @@
     "@web3-onboard/injected-wallets": "^2.6.2",
     "@web3-onboard/react": "^2.6.1",
     "@web3-onboard/uauth": "^2.0.1",
-    "@web3-onboard/walletconnect": "^2.2.2",
-    "ethers": "^6.0.2",
+    "@web3-onboard/walletconnect": "^2.5.2",
+    "ethers": "^6.9.1",
     "next": "^14.0.4",
     "next-themes": "^0.2.1",
-    "pino-pretty": "^10.2.3",
+    "pino-pretty": "^10.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.12.0",
-    "tailwindcss": "^3.3.6"
+    "react-icons": "^4.12.0"
   },
   "license": "MIT",
   "keywords": [
@@ -36,8 +35,8 @@
   "description": "A Lexington WEB3 Demo built with NextJS + Onboard Block Native + Unstoppable Domains (Uauth).",
   "devDependencies": {
     "autoprefixer": "^10.4.16",
-    "daisyui": "^4.4.19",
+    "daisyui": "^4.4.24",
     "postcss": "^8.4.32",
-    "tailwindcss": "^3.3.6"
+    "tailwindcss": "^3.4.0"
   }
 }
